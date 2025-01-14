@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import TodoItem from './TodoItem';
 import { Todo } from '../types/Todo';
-import TodoItem from "./TodoItem.tsx";
+import AddTodoForm from "./AddTodo.tsx";
 
 const TodoList: React.FC = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
@@ -18,10 +19,16 @@ const TodoList: React.FC = () => {
             .catch((error) => console.error('Error deleting todo:', error));
     };
 
+    const addTodo = (description: string) => {
+        axios.post('/api/todo', { description, status: 'OPEN' })
+            .then((response) => setTodos([...todos, response.data]))
+            .catch((error) => console.error('Error adding todo:', error));
+    };
+
     return (
         <div>
             <h1>Todo List</h1>
-
+            <AddTodoForm addTodo={addTodo} />
             <ul>
                 {todos.map(todo => (
                     <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo} />
