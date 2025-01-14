@@ -25,13 +25,21 @@ const TodoList: React.FC = () => {
             .catch((error) => console.error('Error adding todo:', error));
     };
 
+    const updateTodo = (id: string, updatedTodo: Todo) => {
+        axios.put(`/api/todo/${id}`, updatedTodo)
+            .then((response) => {
+                setTodos(todos.map(todo => (todo.id === id ? response.data : todo)));
+            })
+            .catch((error) => console.error('Error updating todo:', error));
+    };
+
     return (
         <div>
             <h1>Todo List</h1>
             <AddTodoForm addTodo={addTodo} />
             <ul>
                 {todos.map(todo => (
-                    <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo} />
+                    <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo} updateTodo={updateTodo} />
                 ))}
 
 
