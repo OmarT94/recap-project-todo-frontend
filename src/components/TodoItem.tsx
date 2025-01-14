@@ -7,11 +7,11 @@ type TodoItemProps = {
 };
 
 const TodoItem: React.FC<TodoItemProps> =
-    ({ todo }) => {
+    ({ todo, deleteTodo }) => {
     return (
         <li>
             <span>{todo.description} ({todo.status})</span>
-
+            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
         </li>
     );
 };
