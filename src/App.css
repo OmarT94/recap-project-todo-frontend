@@ -59,3 +59,96 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+/* App.css */
+
+/* Allgemeines Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* App-Container */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Überschrift */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Todo-Liste */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Todo-Item */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Input und Select-Felder */
+input[type="text"],
+select {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+/* Formular */
+form {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Formular-Button */
+form button {
+  background-color: #27ae60;
+}
+
+form button:hover {
+  background-color: #219653;
+}
+

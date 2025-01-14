@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Todo } from '../types/Todo';
+import './TodoItem.css'
 
 type TodoItemProps = {
     todo: Todo;
@@ -19,7 +20,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, deleteTodo, updateTodo }) => 
     };
 
     return (
-        <li>
+        <li className="todo-item">
             {isEditing ? (
                 <div>
                     <input

@@ -1,0 +1,21 @@
+/* TodoItem.css */
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #836e6e;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.todo-item .todo-edit {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-item .todo-view {
+    display: flex;
+    gap: 10px;
+}
