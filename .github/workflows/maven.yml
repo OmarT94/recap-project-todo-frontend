@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-   working-directory: java-todo-backend
+    working-directory: java-todo-backend
     run: mvn -B package --file pom.xml
 
    
