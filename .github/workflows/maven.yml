@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      working-directory: recap-project-todo-frontend/java-todo-backend
+      working-directory: java-todo-backend
       run: mvn -B package --file pom.xml
 
    
