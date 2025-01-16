@@ -16,7 +16,10 @@
     <name>backend</name>
     <description>backend</description>
     <properties>
-        <java.version>20</java.version>
+        <java.version>21</java.version>
+        <sonar.organization>omart94</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
     </properties>
     <dependencies>
         <dependency>
